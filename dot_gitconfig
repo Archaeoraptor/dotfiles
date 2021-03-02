@@ -1,0 +1,12 @@
+[user]
+	name = zhang.j.k
+	email = zhangjk67@gmail.com
+	signingkey = 4950DCB9584A0CA11688BBCB8D2165997ABAD8ED
+[commit]
+	gpgsign = true
+[http]
+	proxy = socks5://127.0.0.1:1089
+[https]
+	proxy = socks5://127.0.0.1:1089
+[init]
+	defaultBranch = master
