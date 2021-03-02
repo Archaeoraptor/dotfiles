@@ -1,0 +1,7 @@
+[data]
+	email = "zhangjk67@gmail.com"
+	name = "Zhang.j.k"
+
+[sourceVCS]
+    autoCommit = true
+    autoPush = false
