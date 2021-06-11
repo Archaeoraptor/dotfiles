@@ -2,3 +2,8 @@ export INPUT_METHOD=fcitx5
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS=@im=fcitx5
+
+export GOPATH="/home/zjk/go"
+export export GOROOT="/usr/lib/go"
+
+xrandr --output eDP-1 --mode 1920x1080 --pos 240x2160 --rotate normal --scale 1.75x1.75 --output DP-1 --off --output DP-2 --primary --mode 3840x2160 --pos 0x0 --rotate normal --output DP-3 --off
