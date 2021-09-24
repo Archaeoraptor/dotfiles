@@ -1,0 +1,7 @@
+{
+    "pasteImage.defaultName": "X",
+    "pasteImage.encodePath": "none",
+    "pasteImage.path": "${currentFileDir}/pic",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.insertPattern": "\\begin{figure}[h]\t\\includegraphics[width= 6cm]{${imageFileName}}\t\\caption{${imageFileNameWithoutExt}}\t\\label{fig:${imageFileNameWithoutExt}}\\end{figure}",
+}
