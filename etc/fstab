@@ -1,0 +1,18 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda2
+UUID=6804b834-b2cf-4f56-884f-bd4650eb7cb5       /               btrfs           rw,relatime,ssd,space_cache,subvolid=256,subvol=/@      0 0
+
+# /dev/sda1
+UUID=BD4E-0C60          /boot           vfat            rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro   0 2
+
+# /dev/sda2
+UUID=6804b834-b2cf-4f56-884f-bd4650eb7cb5       /home           btrfs           rw,relatime,ssd,space_cache,subvolid=257,subvol=/@home  0 0
+
+# /dev/sda2
+UUID=6804b834-b2cf-4f56-884f-bd4650eb7cb5       /var            btrfs           rw,relatime,ssd,space_cache,subvolid=258,subvol=/@var   0 0
+
+# /dev/sda3
+UUID=29234997-6cc2-4c94-ba4b-8a5f635bf940       none            swap            defaults        0 0
