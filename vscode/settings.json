@@ -9,6 +9,7 @@
     "workbench.iconTheme": "ayu",
     "terminal.integrated.fontWeightBold": "normal",
     "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
     "code-runner.executorMapByFileExtension": {
         ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
         ".vbs": "cscript //Nologo",
