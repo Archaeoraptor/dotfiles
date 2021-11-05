@@ -1,0 +1,50 @@
+conky.config = {
+
+--######################
+-- - Update settings - #
+--######################
+
+	update_interval = 2.0,
+	total_run_times = 0,
+	net_avg_samples = 2,
+	cpu_avg_samples = 2,
+
+	double_buffer = true,
+	no_buffers = true,
+
+--####################
+-- - Text settings - #
+--####################
+
+	use_xft = true,
+	font = 'Ubuntu:size=12',
+	override_utf8_locale = true,
+	default_color = '#cccccc',
+
+--############################
+-- - Window specifications - #
+--############################
+
+	own_window_class = 'Conky',
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_argb_visual = true,
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+	alignment = 'top_left',
+	gap_x = 40,
+	gap_y = 20,
+	minimum_width = 1400, minimum_height = 100,
+	maximum_width = 1200,
+
+	draw_shades = false,
+
+};
+
+conky.text = [[
+${font :BOLD:}${color 1793d0}系统日志 SYSTEM LOG${color}${font comic:pixelsize=25}
+${exec dmesg --level=err,warn}
+#${exec journalctl -p 3 -xb | tail -n10 | fold -s -w1000}
+${rss https://forum.manjaro.org/c/announcements/testing-updates.rss 1 item_titles 4}
+]];
