@@ -82,8 +82,8 @@ ${goto 32}${color0}Today: ${color2}${goto 100}${execi 30 vnstat | grep "today" |
 ${goto 32}${color0}Down: ${color1}${goto 100}${downspeed enp42s0}${color}
 ${goto 32}${color0}Today: ${color2}${goto 100}${execi 30 vnstat | grep "today" | awk '{print $2 $3}'}
 
-${goto 32}${color0}Signal: ${color1}${goto 100}${wireless_link_qual_perc wlp3s0}%${alignr}
+#${goto 32}${color0}Signal: ${color1}${goto 100}${wireless_link_qual_perc enp42s0}%${alignr}
  
 ${goto 32}${color0}Local IP: ${alignr}${color2}${addr enp42s0}
-${goto 32}${color0}Public IP: ${alignr}${color2}${execi 30 wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}
+${goto 32}${color0}Public IP: ${alignr}${color2}${execi 30 curl ip.sb}
 ]];
