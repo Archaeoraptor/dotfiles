@@ -43,8 +43,12 @@ conky.config = {
 };
 
 conky.text = [[
-${font :BOLD:}${color 1793d0}系统日志 SYSTEM LOG${color}${font comic:pixelsize=25}
-${exec dmesg --level=err,warn}
+${font :BOLD:}${color 1793d0}Archlinux 更新${color}${font comic:pixelsize=25}
+#${exec sudo dmesg --level=err,warn}
 #${exec journalctl -p 3 -xb | tail -n10 | fold -s -w1000}
-${rss https://forum.manjaro.org/c/announcements/testing-updates.rss 1 item_titles 4}
+可更新的包： ${execi 3600 checkupdates | wc -l}
+${font :BOLD:}${color 1793d0}Archlinux News${color}${font comic:pixelsize=25}
+${rss https://archlinux.org/feeds/news/ 1 item_titles 1}
+#${font :BOLD:}${color 1793d0}System Log${color}${font comic:pixelsize=25}
+#/var/log ... ${exec du -sch /var/log | head -n1 | awk '{print $1}'}
 ]];
