@@ -3,7 +3,7 @@ font:
     family: "MesloLGS NF"
 
 # Background opacity
-background_opacity: 1
+window.opacity: 0.99
 
 #Colors (Oceanic Next)
 #colors:
