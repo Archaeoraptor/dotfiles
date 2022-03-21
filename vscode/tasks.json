@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile",
+            "type": "process",
+            "command": "clang",
+            "args": [
+                "${file}",
+                "-g",
+                "-o",
+                "${fileDirname}/build/${fileBasenameNoExtension}.out", // 指定编译生成结果（.out文件和.out.dSYM文件夹）
+                "-Wall",
+                "-std=c11",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+        }
+    ]
+}
