@@ -1,0 +1,7 @@
+# see https://github.com/qsdrqs/caps2esc_autoinstall
+# see https://superuser.com/questions/566871/how-to-map-the-caps-lock-key-to-escape-key-in-arch-linux
+
+- JOB: "intercept -g $DEVNODE | caps2esc -m 1 | uinput -d $DEVNODE"
+  DEVICE:
+    EVENTS:
+      EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
