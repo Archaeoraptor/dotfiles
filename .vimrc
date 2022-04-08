@@ -3,15 +3,6 @@ Plug 'https://github.com/lilydjwg/fcitx.vim'
 
 call plug#end()
 
-
-"synatx highlighting
-syntax on
-"show row numbercall plug#begin('~/.vim/plugged')
-Plug 'https://github.com/lilydjwg/fcitx.vim'
-
-call plug#end()
-
-
 "synatx highlighting
 syntax on
 "show row number
@@ -29,19 +20,14 @@ set ttimeoutlen=20
 set autoread
 
 "clipboard setting
-set clipboard=unnamedplus
-set number
+set clipboard^=unnamed,unnamedplus
 
-"enable mouse
-set mouse=a
+" Search
+set hlsearch
 
-"a very little ttimeoutlen value for fcitx
-set ttimeoutlen=20
+" Encoding setting
+"
+set encoding=utf-8
 
-"do not compatiblie with vi set nocompatible
-
-"auto read change from outside
-set autoread
-
-"clipboard setting
-set clipboard=unnamedplus
+" Always enable paste
+set paste
