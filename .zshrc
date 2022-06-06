@@ -73,6 +73,10 @@ alias sshcd="ssh -i ~/.ssh/id_cd ubuntu@139.155.69.60"
 alias sshtc="ssh -i ~/.ssh/uestc1 root@139.155.48.208"
 alias ssh221="ssh -i ~/.ssh/id_rsa_221 xi102@211.83.111.221"
 
+# disable beeper
+alias poweroff="systemctl poweroff --no-wall"
+alias reboot="systemctl reboot --no-wall"
+
 ## path setting
 export PATH="$PATH:/opt/cuda/include"
 export PATH="$PATH:/opt/cuda/bin"

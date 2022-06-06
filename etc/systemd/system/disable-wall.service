@@ -1,0 +1,9 @@
+[Unit]
+Requires=systemd-logind.service
+After=systemd-logind.service
+Description=Disable logind wall messages
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/busctl set-property org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager EnableWallMessages b false
+[Install]
+WantedBy=multi-user.target
