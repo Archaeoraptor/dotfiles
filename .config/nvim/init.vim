@@ -5,6 +5,9 @@ call plug#begin()
 Plug 'https://github.com/h-hg/fcitx.nvim.git'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 if has('nvim')
@@ -39,4 +42,8 @@ set encoding=utf-8
 " use ctrl + space to switch input method
 nnoremap <c-space>
 
+" Vim Script
+colorscheme github_light
+
 lua require('plugins')
+runtime vim.lua
