@@ -1,13 +1,18 @@
 "use insert mode as default
 startinsert
 
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 call plug#begin()
 Plug 'https://github.com/h-hg/fcitx.nvim.git'
 Plug 'https://github.com/tpope/vim-surround'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'projekt0n/github-nvim-theme'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'akinsho/toggleterm.nvim',Cond(!exists('g:vscode'))
+Plug 'projekt0n/github-nvim-theme', Cond(!exists('g:vscode'))
+Plug 'nvim-telescope/telescope.nvim', Cond(!exists('g:vscode'))
+Plug 'nvim-treesitter/nvim-treesitter', Cond(!exists('g:vscode'))
 call plug#end()
 
 if has('nvim')
