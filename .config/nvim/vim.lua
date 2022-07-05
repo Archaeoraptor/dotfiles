@@ -10,3 +10,5 @@ require'nvim-treesitter.configs'.setup{
         enable = true,
     },
 }
+-- 自动打出成对括号
+require("nvim-autopairs").setup {}
