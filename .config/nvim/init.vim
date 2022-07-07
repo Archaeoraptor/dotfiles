@@ -1,5 +1,7 @@
-"use insert mode as default
-startinsert
+"use insert mode as default, only on vscode-neovim plugins start in vscode
+if exists('g:vscode')
+    startinsert
+endif
 
 function! Cond(cond, ...)
   let opts = get(a:000, 0, {})
@@ -14,11 +16,15 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'skywind3000/vim-terminal-help',Cond(!exists('g:vscode'))
 Plug 'akinsho/toggleterm.nvim',Cond(!exists('g:vscode'))
 Plug 'projekt0n/github-nvim-theme', Cond(!exists('g:vscode'))
+Plug 'nvim-lua/popup.nvim', Cond(!exists('g:vscode'))
+Plug 'nvim-lua/plenary.nvim', Cond(!exists('g:vscode'))
 Plug 'nvim-telescope/telescope.nvim', Cond(!exists('g:vscode'))
 Plug 'nvim-treesitter/nvim-treesitter', Cond(!exists('g:vscode'))
 Plug 'benknoble/vim-racket', Cond(!exists('g:vscode'))
 Plug 'lervag/vimtex', Cond(!exists('g:vscode'))
 Plug 'windwp/nvim-autopairs', Cond(!exists('g:vscode'))
+" use telescope now, not need leaderf
+" Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}, cond(!exists('g:vscode'))
 call plug#end()
 
@@ -61,7 +67,7 @@ set expandtab
 nnoremap <c-space>
 
 " Leader 键设为空格
-let mapleader = "\<space>"
+nmap <space> <leader>
 
 " Coc插件配置
 " 时间设为100ms
@@ -103,6 +109,14 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" telescope search config
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 " 显示文档
 " Use K to show documentation in preview window.
